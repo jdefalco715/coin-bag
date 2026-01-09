@@ -3,8 +3,16 @@ export function connectToTicker(symbol, onMessage) {
     
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      onMessage(data); // You'll get live price, volume, etc.
+      onMessage(data); 
     };
-  
+
+    ws.onerror = (error) => {
+      console.error('WebSocket Error:', error);
+    };
+
+    ws.onclose = () => {
+      console.log('WebSocket connection closed');
+    };
+
     return ws;
   }
