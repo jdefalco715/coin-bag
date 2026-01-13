@@ -5,10 +5,10 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[1fr_20px] items-start justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[1fr_20px] items-start justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <main className="flex flex-col gap-[32px] row-start-1 items-center">
         
-        <p className="text-center text-2xl">
+        <p className="text-center text-2xl text-gray-800 dark:text-gray-100">
           Coin Bag, a crypto price tracker.
         </p>
           <div className="grid grid-cols-4 gap-2">
@@ -23,7 +23,7 @@ export default function Home() {
               'BCHUSDT', 
               'LTCUSDT', 
               'XLMUSDT',
-              'XMRUSDT', 
+              'BNBUSDT', 
               'AVAXUSDT', 
               'MATICUSDT',
               'UNIUSDT',
