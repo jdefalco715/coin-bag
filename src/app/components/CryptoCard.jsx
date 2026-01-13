@@ -47,7 +47,7 @@ export default function CryptoCard({ symbol }) {
 
     if (loading) {
         return (
-            <div className="bg-gray-700 dark:bg-gray-200 w-40 h-40 p-4 rounded-lg flex flex-col justify-center items-center animate-pulse shadow-md dark:shadow-lg dark:shadow-gray-500/20">
+            <div className="bg-gray-700 dark:bg-gray-200 w-48 h-48 p-4 rounded-lg flex flex-col justify-center items-center gap-2 animate-pulse shadow-md dark:shadow-lg dark:shadow-gray-500/20">
                 <div className="h-4 bg-gray-300 rounded w-20 mb-2"></div>
                 <div className="h-4 bg-gray-300 rounded w-16 mb-2"></div>
                 <div className="h-4 bg-gray-300 rounded w-16"></div>
@@ -57,18 +57,18 @@ export default function CryptoCard({ symbol }) {
 
     if (error) {
         return (
-            <div className="bg-gray-800 dark:bg-gray-100 w-40 h-40 p-4 rounded-lg flex flex-col justify-center items-center shadow-lg dark:shadow-xl dark:shadow-red-500/20 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-red-500/30 hover:scale-105 transition-all">
-                <h2 className="text-lg font-bold text-gray-200 dark:text-gray-600">{symbol}</h2>
-                <p className="text-red-500 dark:text-red-400 text-xs text-center mt-2">{error}</p>
+            <div className="bg-gray-800 dark:bg-gray-100 w-48 h-48 p-4 rounded-lg flex flex-col justify-center items-center gap-2 shadow-lg dark:shadow-xl dark:shadow-red-500/20 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-red-500/30 hover:scale-105 transition-all">
+                <h2 className="text-xl font-bold tracking-tight leading-tight text-gray-200 dark:text-gray-600">{symbol}</h2>
+                <p className="text-red-500 dark:text-red-400 text-sm text-center mt-2">{error}</p>
             </div>
         );
     }
 
     return (
-        <div className="bg-gray-800 dark:bg-gray-100 w-40 h-40 p-4 rounded-lg flex flex-col justify-center items-center shadow-lg dark:shadow-xl dark:shadow-purple-500/20 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-purple-500/30 hover:scale-105 transition-all">
-            <h2 className="text-lg font-bold text-gray-200 dark:text-gray-600">{symbol}</h2>
-            <p className="text-sm text-gray-300 dark:text-gray-600">Price: ${price.toFixed(2)}</p>
-            <p className={`text-sm ${changeColor}`}>
+        <div className="bg-gray-800 dark:bg-gray-100 w-48 h-48 p-4 rounded-lg flex flex-col justify-center items-center gap-2 shadow-lg dark:shadow-xl dark:shadow-purple-500/20 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-purple-500/30 hover:scale-105 transition-all">
+            <h2 className="text-xl font-bold tracking-tight leading-tight text-gray-200 dark:text-gray-600">{symbol}</h2>
+            <p className="text-base leading-relaxed text-gray-300 dark:text-gray-600">Price: ${price.toFixed(2)}</p>
+            <p className={`text-base font-bold ${changeColor}`}>
                 {changeIcon} {Math.abs(change).toFixed(2)}%
             </p>
         </div>
