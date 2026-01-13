@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ErrorBoundary from "./components/ErrorBoundary";
 import CryptoCard from "./components/CryptoCard";
 import { FaGithub } from "react-icons/fa";
 
@@ -10,29 +11,32 @@ export default function Home() {
         <p className="text-center text-2xl">
           Coin Bag, a crypto price tracker.
         </p>
-
-        <div className="grid grid-cols-4 gap-2">
-          <CryptoCard symbol="BTCUSDT" />
-          <CryptoCard symbol="ETHUSDT" />
-          <CryptoCard symbol="SOLUSDT" />
-          <CryptoCard symbol="ADAUSDT" />
-          <CryptoCard symbol="DOGEUSDT" />
-          <CryptoCard symbol="XRPUSDT" />
-          <CryptoCard symbol="DOTUSDT" />
-          <CryptoCard symbol="LINKUSDT" />
-          <CryptoCard symbol="BCHUSDT" />
-          <CryptoCard symbol="LTCUSDT" />
-          <CryptoCard symbol="XLMUSDT" />
-          <CryptoCard symbol="XMRUSDT" />
-          <CryptoCard symbol="AVAXUSDT" />
-          <CryptoCard symbol="MATICUSDT" />
-          <CryptoCard symbol="UNIUSDT" />
-          <CryptoCard symbol="ATOMUSDT" />
-          <CryptoCard symbol="ALGOUSDT" />
-          <CryptoCard symbol="VETUSDT" />
-          <CryptoCard symbol="FILUSDT" />
-          <CryptoCard symbol="AAVEUSDT" />
-        </div>
+          <div className="grid grid-cols-4 gap-2">
+            {['BTCUSDT',
+              'ETHUSDT', 
+              'SOLUSDT', 
+              'ADAUSDT', 
+              'DOGEUSDT', 
+              'XRPUSDT', 
+              'DOTUSDT', 
+              'LINKUSDT', 
+              'BCHUSDT', 
+              'LTCUSDT', 
+              'XLMUSDT',
+              'XMRUSDT', 
+              'AVAXUSDT', 
+              'MATICUSDT',
+              'UNIUSDT',
+              'ATOMUSDT',
+              'ALGOUSDT',
+              'VETUSDT',
+              'FILUSDT',
+              'AAVEUSDT'].map((symbol) => (
+                <ErrorBoundary key={symbol}>
+                  <CryptoCard symbol={symbol} />
+                </ErrorBoundary>
+              ))}
+            </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
