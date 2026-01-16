@@ -67,7 +67,7 @@ export default function CryptoCard({ symbol }) {
     return (
         <div className="bg-gray-800 dark:bg-gray-100 w-48 h-48 p-4 rounded-lg flex flex-col justify-center items-center gap-2 shadow-lg dark:shadow-xl dark:shadow-purple-500/20 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-purple-500/30 hover:scale-105 transition-all">
             <h2 className="text-xl font-bold tracking-tight leading-tight text-gray-200 dark:text-gray-600">{symbol}</h2>
-            <p className="text-base leading-relaxed text-gray-300 dark:text-gray-600">Price: ${price.toFixed(2)}</p>
+            <p className="text-base leading-relaxed text-gray-300 dark:text-gray-600">Price: ${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
             <p className={`text-base font-bold ${changeColor}`}>
                 {changeIcon} {Math.abs(change).toFixed(2)}%
             </p>
