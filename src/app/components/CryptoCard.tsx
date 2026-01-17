@@ -3,22 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { getSymbolStats } from '../api/binance';
 import { connectToTicker } from '../utils/websocket';
+import { BinanceTickerResponse } from '../api/binance';
+import { WebSocketTickerMessage } from '../utils/websocket';
 
 interface CryptoCardProps {
     symbol: string;
 }
 
-interface BinanceTickerResponse {
-    lastPrice: string;
-    priceChange: string; // Change in USD
-    priceChangePercent: string; // Change in percentage
-}
-
-interface WebSocketTickerMessage {
-    c: string; // Last (current) Price
-    p: string; // Price Change (in USD)
-    P: string; // Price Change (Percentage)
-}
 
 export default function CryptoCard({ symbol } : CryptoCardProps) {
     const [price, setPrice] = useState<number>(0);
