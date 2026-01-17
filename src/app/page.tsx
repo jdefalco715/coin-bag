@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ErrorBoundary from "./components/ErrorBoundary";
 import CryptoCard from "./components/CryptoCard";
 import { FaGithub } from "react-icons/fa";
