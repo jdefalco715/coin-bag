@@ -71,7 +71,7 @@ export default async function Home() {
           </div>
           
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Data based on Binance 24hr tickers.
+            Data based on <a href="https://www.binance.com/en/markets" target="_blank" className="underline hover:underline-offset-4" rel="noopener noreferrer">Binance</a> 24hr tickers.
           </p>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
