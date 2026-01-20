@@ -5,24 +5,25 @@ export interface BinanceTickerResponse {
   lastPrice: string;
   priceChange: string;
   priceChangePercent: string;
+  volume: string;
+  quoteVolume: string;
 }
 
 
-/*
 export type BinanceTickerArray = BinanceTickerResponse[];
 
-// Get all current prices - commented out for now to implement in the future
+// Get all current prices 
 
-  export async function getAllPrices(): Promise<BinanceTickerArray> {
-    const res = await fetch(`${BASE_URL}/api/v3/ticker/24hr`);
+export async function getAllPrices(): Promise<BinanceTickerArray> {
+  const res = await fetch(`${BASE_URL}/api/v3/ticker/24hr`);
 
-    if (!res.ok) {
-      throw new Error(`API Error: ${res.status} ${res.statusText}`);
-    }
-
-    return await res.json(); // This returns an array of 24hr stats for all trading pairs
+  if (!res.ok) {
+    throw new Error(`API Error: ${res.status} ${res.statusText}`);
   }
-*/
+
+  return await res.json(); // This returns an array of 24hr stats for all trading pairs
+}
+
 
 // Get a specific coin by symbol (e.g., BTCUSDT)
 export async function getSymbolStats(symbol : string): Promise<BinanceTickerResponse> {
