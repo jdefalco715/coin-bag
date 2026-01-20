@@ -13,8 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Coin Bag",
-  description: "A minimalistic crypto price tracker.",
+  title: "Coin Bag - Real-Time Cryptocurrency Price Tracker",
+  description: "Track real-time cryptocurrency prices for Bitcoin, Ethereum, and 20+ other coins using live data from Binance. A minimalistic, responsive crypto price tracker.",
+  keywords: ["cryptocurrency", "crypto", "price tracker", "bitcoin", "ethereum", "binance", "real-time"],
+  authors: [{ name: "John DeFalco" }],
 };
 
 export default function RootLayout({
