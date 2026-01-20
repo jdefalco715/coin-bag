@@ -62,13 +62,17 @@ export default async function Home() {
           </p>
         </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
-            {top20.map((symbol) => (
-                <ErrorBoundary key={symbol}>
-                  <CryptoCard symbol={symbol} />
-                </ErrorBoundary>
-              ))}
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+          {top20.map((symbol) => (
+              <ErrorBoundary key={symbol}>
+                <CryptoCard symbol={symbol} />
+              </ErrorBoundary>
+            ))}
+          </div>
+          
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Data based on Binance 24hr tickers.
+          </p>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
