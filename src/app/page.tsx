@@ -13,7 +13,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            A crypto price tracker.
+            A minimalistic crypto price tracker.
           </p>
         </div>
 

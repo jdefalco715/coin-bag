@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { getSymbolStats } from '../api/binance';
-import { connectToTicker } from '../utils/websocket';
-import { BinanceTickerResponse } from '../api/binance';
-import { WebSocketTickerMessage } from '../utils/websocket';
+import { getSymbolStats, BinanceTickerResponse } from '../utils/binance';
+import { connectToTicker, WebSocketTickerMessage } from '../utils/websocket';
 
 interface CryptoCardProps {
     symbol: string;
