@@ -32,7 +32,6 @@ export default async function Home() {
             <p className="text-sm">Please try refreshing the page.</p>
           </div>
         </main>
-        {/* Keep footer */}
         <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -58,7 +57,7 @@ export default async function Home() {
           </h1>
 
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            A minimalistic crypto price tracker.
+            Lightweight crypto price monitor.
           </p>
         </div>
 
@@ -71,7 +70,7 @@ export default async function Home() {
           </div>
           
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Data based on <a href="https://www.binance.com/en/markets" target="_blank" className="underline hover:underline-offset-4" rel="noopener noreferrer">Binance</a> 24hr tickers.
+            Powered by <a href="https://www.binance.com/en/markets" target="_blank" className="underline hover:underline-offset-4" rel="noopener noreferrer">Binance</a> 24hr market data.
           </p>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
