@@ -14,8 +14,11 @@ export async function GET(request: NextRequest) {
 
         return NextResponse.json({ top }, { status: 200 });
     } catch (error) {
-        console.error('Error fetching prices:', error);
-        return NextResponse.json({ error: 'Failed to fetch prices' }, { status: 500 });
+        console.error('Error fetching prices:', error instanceof Error ? error.message : error);
+        return NextResponse.json({ 
+            error: 'Failed to fetch prices',
+            details: error instanceof Error ? error.message : 'Unknown error'
+        }, { status: 500 });
     }
 
 
